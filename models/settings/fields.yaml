@@ -1,0 +1,6 @@
+fields:
+    is_active:
+        label: 'Активировать систему платежей'
+        span: auto
+        default: 0
+        type: switch

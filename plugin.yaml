@@ -1,0 +1,6 @@
+plugin:
+    name: 'geekslab.payments::lang.plugin.name'
+    description: 'geekslab.payments::lang.plugin.description'
+    author: 'Geeks Lab'
+    icon: oc-icon-adjust
+    homepage: ''
