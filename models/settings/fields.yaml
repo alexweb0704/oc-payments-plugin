@@ -1,6 +1,58 @@
 fields:
-    is_active:
-        label: 'Активировать систему платежей'
-        span: auto
-        default: 0
+    enabled:
         type: switch
+        label: 'geekslab.banners::lang.models.settings.fields.enabled.label'
+        'on': 'geekslab.banners::lang.models.settings.fields.enabled.on'
+        'off': 'geekslab.banners::lang.models.settings.fields.enabled.off'
+        comment: 'geekslab.banners::lang.models.settings.fields.enabled.comment'
+        span: full
+tabs:
+    fields:
+        registered:
+            label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.label'
+            prompt: 'geekslab.banners::lang.models.settings.tabs.fields.registered.prompt'
+            span: full
+            tab: 'geekslab.banners::lang.models.settings.tabs.fields.registered.tab'
+            type: repeater
+            form:
+                fields:
+                    is_active:
+                        type: switch
+                        label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.is_active.label'
+                        default: true
+                        span: full
+                    modelClass:
+                        label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.modelClass.label'
+                        showSearch: true
+                        span: auto
+                        required: 1
+                        emptyOption: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.modelClass.emptyOption'
+                        type: dropdown
+                    idColumn:
+                        label: 'Индедификатор для оплаты'
+                        showSearch: true
+                        span: auto
+                        required: 1
+                        emptyOption: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.slug.emptyOption'
+                        dependsOn:
+                            - modelClass
+                        type: dropdown
+                    modelName:
+                        label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.modelName.label'
+                        type: text
+                        dependsOn:
+                            - modelClass
+                        span: auto
+                    modelColumn:
+                        label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.modelColumn.label'
+                        type: dropdown
+                        span: auto
+                    page:
+                        label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.page.label'
+                        type: dropdown
+                        span: auto
+                    pageSlug:
+                        label: 'geekslab.banners::lang.models.settings.tabs.fields.registered.form.fields.pageSlug.label'
+                        type: text
+                        span: auto
+                        

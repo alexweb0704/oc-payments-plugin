@@ -1,0 +1,64 @@
+fields:
+    is_active:
+        label: Активность
+        span: auto
+        type: switch
+    name:
+        label: Название
+        span: auto
+        type: text
+    gateway:
+        label: 'Платежный шлюз'
+        showSearch: true
+        span: auto
+        type: dropdown
+    code:
+        label: Код
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    type:
+        label: 'Пополнение или оплата'
+        options:
+            pay: Оплата
+            balance: Пополнение
+        showSearch: true
+        span: auto
+        type: dropdown
+    model:
+        label: Субьект
+        showSearch: true
+        span: auto
+        type: dropdown
+tabs:
+    fields:
+        description:
+            label: Описание
+            size: large
+            span: full
+            type: richeditor
+            tab: Описание
+        'settings[before_pay]':
+            label: 'Статус заказа до оплаты'
+            span: auto
+            type: checkboxlist
+            tab: Настройки
+        'settings[before_cancel]':
+            label: 'Статус заказа до отмены'
+            span: auto
+            type: checkboxlist
+            tab: Настройки
+        'settings[after_pay]':
+            label: 'Статус заказа после оплаты'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: Настройки
+        'settings[after_cancel]':
+            label: 'Статус заказа после отмены'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: Настройки

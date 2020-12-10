@@ -1,0 +1,10 @@
+name: Types
+form: $/geekslab/payments/models/type/fields.yaml
+modelClass: GeeksLab\Payments\Models\Type
+defaultRedirect: geekslab/payments/types
+create:
+    redirect: 'geekslab/payments/types/update/:id'
+    redirectClose: geekslab/payments/types
+update:
+    redirect: geekslab/payments/types
+    redirectClose: geekslab/payments/types

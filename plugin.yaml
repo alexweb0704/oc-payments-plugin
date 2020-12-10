@@ -4,3 +4,7 @@ plugin:
     author: 'Geeks Lab'
     icon: oc-icon-adjust
     homepage: ''
+permissions:
+    geekslab_payments_types:
+        tab: 'geekslab.payments::lang.plugin.name'
+        label: 'geekslab.payments::lang.permissions.types'

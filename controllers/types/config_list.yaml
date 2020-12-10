@@ -1,0 +1,12 @@
+list: $/geekslab/payments/models/type/columns.yaml
+modelClass: GeeksLab\Payments\Models\Type
+title: Types
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'geekslab/payments/types/update/:id'
